@@ -1,0 +1,18 @@
+https://api.mymemory.translated.net/get?q=Hello World!&langpair=en|it
+
+of 
+
+https://mymemory.translated.net/doc/spec.php
+
+
+
+// selectTag.forEach(selectTag => {
+//   for (let countryCode in countries) {
+//     let option = document.createElement("option");
+//     // let option =`<option value="${countryCode}">${countries[countryCode]}</option>`
+//     option.value = countryCode;
+//     console.log(option.value=countryCode)
+//     option.textContent = countries[countryCode];
+//     selectTag.appendChild(option);
+//   }
+// });

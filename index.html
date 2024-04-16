@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Translator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="text-input">
+                <textarea name="text" cols="30" rows="10" class="from-text" placeholder="Enter Text"></textarea>
+                <textarea name="text" cols="30" rows="10" class="to-text" placeholder="Translation"></textarea>
+            </div>
+            <ul class="controls">
+                <li class="row-from">
+                    <div class="icons">
+                        <i id="from" class="fa-solid fa-volume-high"></i>
+                        <i id="from" class="fa-solid fa-copy"></i>
+                    </div>
+                    <select name="" id="row">
+                        <!-- <option value="">English</option>
+                        <option value="">Hindi</option>
+                        <option value="">Nepal</option> -->
+                    </select>
+                </li>
+                <li class="exchange"><i class="fa-solid fa-arrow-right-arrow-left"></i></li>
+                <li class="row-to">
+                    <div class="icons">
+                        <i id="to" class="fa-solid fa-volume-high"></i>
+                        <i id="to" class="fa-solid fa-copy"></i>
+                    </div>
+                    <select name="" id="row">
+                        <!-- <option value="">English</option>
+                        <option value="">Hindi</option>
+                        <option value="">Nepal</option> -->
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <button class="btn">Text translate</button>
+    </div>
+    <span>&#169;Text Translator,All right reserved.
+        <p>&emsp;&emsp;&nbsp;Designed By Dharmendra</p>
+    </span>
+</body>
+<script src="./index.js"></script>
+<script src="./countries.js"></script>
+
+</html>
