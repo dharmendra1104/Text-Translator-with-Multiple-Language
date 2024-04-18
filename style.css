@@ -34,7 +34,7 @@ body {
 }
 
 .text-input .to-text {
-  border-radius: opx;
+  border-radius: 0px;
   border-left: 1px solid #bbb;
 }
 
