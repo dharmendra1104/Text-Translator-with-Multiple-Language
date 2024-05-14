@@ -111,27 +111,26 @@ selectTag.forEach(selectTag => {
     let option = document.createElement("option");
     // let option =`<option value="${countryCode}">${countries[countryCode]}</option>`
     option.value = countryCode;
-    // console.log(option.value=countryCode)
     option.textContent = countries[countryCode];
     selectTag.appendChild(option);
   }
 });
+
 if (selectTag[1].value === "hi-IN") {
   selectTag[0].value = "en-GB";
 }
 
 exchange.addEventListener('click', () => {
-  //exchange textarea
-  let tempText = fromText.value
+  let tempText = fromText.value            //exchange textarea
   fromText.value = toText.value
   toText.value = tempText
 
-  // exchange select tag
-  let templang = selectTag[0].value
+
+  let templang = selectTag[0].value        // exchange select tag
   console.log(templang)
   selectTag[0].value = selectTag[1].value
   selectTag[1].value = templang
-  
+
   function rotateElement() {
     const currentRotation = parseInt(exchange.style.transform.replace('rotate(', '')) || 0;
     const newRotation = currentRotation + 270;
@@ -153,12 +152,12 @@ icons.forEach(icon => {
       let utterance;
       if (target.id === "from") {
         utterance = new SpeechSynthesisUtterance(fromText.value)
-        utterance.lang = selectTag[0].value  //setting utterance language to fromSelect tag value
+        utterance.lang = selectTag[0].value   //setting utterance language to fromSelect tag value
       } else {
         utterance = new SpeechSynthesisUtterance(toText.value)
-        utterance.lang = selectTag[1].value  //setting utterance language to toSelect tag value
+        utterance.lang = selectTag[1].value   //setting utterance language to toSelect tag value
       }
-      speechSynthesis.speak(utterance);  //speak the pass uttrance
+      speechSynthesis.speak(utterance);       //speak the pass uttrance
     }
   });
 });
@@ -166,8 +165,8 @@ icons.forEach(icon => {
 
 translateBtn.addEventListener('click', () => {
   let text = fromText.value;
-  translateForm = selectTag[0].value //getting formslected tag value 
-  translateTo = selectTag[1].value //getting Toslected tag value 
+  translateForm = selectTag[0].value          //getting formslected tag value 
+  translateTo = selectTag[1].value            //getting Toslected tag value 
   let url = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateForm}|${translateTo}`
   fetch(url).then(res => res.json()).then(data => {
     console.log(data)
